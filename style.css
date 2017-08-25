@@ -59,81 +59,83 @@ caption {
 }
 
 /*TASK 4*/
-.table4 {
+.basket {
 	border-collapse: collapse;
 	border: 2px solid #ddd;	
 	box-shadow: 0 0 10px 3px #ddd;
 	position: absolute;
 	font-family: 'Arial Narrow', Arial, sans-serif;
+	position: relative;
+	margin-bottom: 20px;
 }
 
-.table4 th, td {
+.basket th, td {
 	padding: 10px;
 }
 
-.table4 th {
+.basket th {
 		text-align: left;
 }
 
-.table4 tr:nth-child(-1n+5):not(:first-child) {
-	border-bottom: 1px solid #ddd;
-
+.basket tbody> tr:nth-child(n+3):nth-child(-n+6) {
+	border-top: 1px solid #ddd;
 }
 
-.table4 button {
-	background-color: #E7242A;
-	color: #fff;
-	font-weight: bold;
-	border: none;
-}
-
-.table4 button:hover{
-	background-color: #DE5F57;
-}
-
-.table4 tr td:nth-child(n+8) {
+.basket tr td:nth-child(n+8) {
 	background-color: #fff;
 	color: inherit;
 	font-weight: inherit;
 
 }
 
-.close {
-	position: relative;
-	top: 21px;
-	left: 667px;
-	z-index: 1;
-	background: #000;
-	color: #fff;
-	border-radius: 100%;
-	box-shadow: 0 0 10px 3px #ddd;
-}
-
-.arrow {
-	position: relative;
-	top: 7px;
-}
-
-.sum td:first-child {
+.basket .sum td:first-child {
 	text-align: right;
 }
 
-tfoot,
+.basket tfoot tr:last-child,
 .arrow {
 	text-align: center;
 	color: #E7252C;
 	font-weight: bold;
 } 
 
-.table4 tr td:first-child {
+.basket tr td:first-child {
 	color: #E7252C;
 }
 
-.table4 .total td:nth-child(-n+2) {
+.basket .total tr:first-of-type>td {
 	font-weight: bold;
 	color: #000;
 }
 
-.table4 .no_sale td:nth-child(-n+2) {
+.basket .no_sale td:nth-child(-n+2) {
 	color: #858585;
+}
+
+/*BUTTON .CLOSE icon*/
+.basket {
+	position: relative;
+}
+
+.basket #close {
+	border-radius: 100%;
+	padding: 5px 5px;
+	box-shadow: 0 0 5px black;
+	z-index: 1;
+    float: right;
+}
+
+.basket button {
+	background-color: #E7242A;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+}
+
+.basket button:hover{
+	background-color: #DE5F57;
+}
+
+.basket .sum td:nth-child(2){
+  border-right: 3px solid rgba(216,216,216,0.3);
 }

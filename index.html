@@ -10,17 +10,20 @@
 <body>
 		<table class="task1">
 		<caption>Задание 1</caption>
-			<tr>
-				<th rowspan="2">Напиток</th>
-				<th colspan="5">Человек</th>
-			</tr>
-			<tr>
-				<td>Незнайка</td>
-				<td>Пончик</td>
-				<td>Торопыжка</td>
-				<td>Пилюлькин</td>
-				<td>Всего</td>
-			</tr>
+			<thead>
+				<tr>
+					<th rowspan="2">Напиток</th>
+					<th colspan="5">Человек</th>
+				</tr>
+				<tr>
+					<th>Незнайка</th>
+					<th>Пончик</th>
+					<th>Торопыжка</th>
+					<th>Пилюлькин</th>
+					<th>Всего</th>
+				</tr>
+			</thead>
+			
 			<tr>
 				<td>Квас, л</td>
 				<td>2</td>
@@ -64,11 +67,13 @@
 		</table>
 		<table class="task2">
 		<caption>Задание 2</caption>
-			<tr>
-				<th>Name</th>
-				<th>Item</th>
-				<th>Item Price</th>
-			</tr>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Item</th>
+					<th>Item Price</th>
+				</tr>
+			</thead>	
 			<tr>
 				<td>Alvin</td>
 				<td>Aclair</td>
@@ -119,16 +124,24 @@
 			</tr>
 		</table>
 
-	<table class="table4">
-	<i class="material-icons close">highlight_off</i>
+	
+	<table class="basket">
+  <tr>
+    <td colspan="10">
+      <button id="close">X</button>
+    </td>
+  </tr>
+	<!-- <thead> -->
+	<tbody>
 		<tr>
 			<th>Название</th>
 			<th>Кол-во</th>
 			<th>Цена</th>
 			<th>Скидка</th>
 			<th colspan="4">&nbsp;</th>
-			<th>Итого</th>
+			<th colspan="2">Итого</th>
 		</tr>
+<!-- 	</thead> -->
 		<tr>
 			<td>Медведь девочка</td>
 			<td>1 шт.</td>
@@ -138,7 +151,7 @@
 			<td><button>-</button></td>
 			<td><button>УДАЛИТЬ</button></td>
 			<td>&nbsp;</td>
-			<td>300р.</td>
+			<td colspan="2">300р.</td>
 		</tr>
 		<tr>
 			<td>Динозавр</td>
@@ -149,7 +162,7 @@
 			<td><button>-</button></td>
 			<td><button>УДАЛИТЬ</button></td>
 			<td>&nbsp;</td>
-			<td>100р.</td>
+			<td colspan="2">100р.</td>
 		</tr>
 		<tr>
 			<td>Семейный домик</td>
@@ -160,7 +173,7 @@
 			<td><button>-</button></td>
 			<td><button>УДАЛИТЬ</button></td>
 			<td>&nbsp;</td>
-			<td>10 000р.</td>
+			<td colspan="2">10 000р.</td>
 		</tr>
 		<tr>
 			<td>Веселый горох</td>
@@ -171,23 +184,25 @@
 			<td><button>-</button></td>
 			<td><button>УДАЛИТЬ</button></td>
 			<td>&nbsp;</td>
-			<td>300р.</td>
+			<td colspan="2">300р.</td>
 		</tr>
-		<tr rowspan="2" class="sum total">
-			<td colspan="8">4 шт. на сумму:</td>
-			<td>10 700р.</td>
-		</tr>
-		<tr class="sum no_sale">
-			<td colspan="8">Сумма без скидки:</td>
-			<td>11 000р. &#8722;</td>
-		</tr>
-
+	</tbody>
 		<tfoot>
-			<td colspan="9">перейти в корзину <i class="material-icons arrow">arrow_forward</i></td>
-		</tfoot>
-	</table>
+			<tr class="sum total">
+				<td colspan="8">4 шт. на сумму:</td>
+				<td>10 700р.</td>
+        		<td>&nbsp;</td>
+			</tr>
+			<tr class="sum no_sale">
+				<td colspan="8">Сумма без скидки:</td>
+				<td>11 000р. &#8722;</td>
+        		<td>&nbsp;</td>
+			</tr>
 
-	
-	
+		    <tr class="last">
+				<td colspan="10">перейти в корзину <i class="material-icons arrow">arrow_forward</i></td>
+			</tr>
+		</tfoot>
+	</table>	
 </body>
 </html>
